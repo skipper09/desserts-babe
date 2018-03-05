@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+  margin-top: 0px;
+  height: 13vh;
+  padding: 30px;
+  background-color: pink;
+}
+
+#header-title {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 0.75em;
+}
+
+#root {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  height: 30px;
+  width: 97%;
+  border: none;
+  border-bottom: solid grey 1px;
+}
+
+#search-div {
+  padding: 15px;
+  height: 5vh;
+}
+
+label {
+  color: grey;
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+#resultsDiv {
+  overflow: auto; 
+  height: 63vh;
+}
+
+footer {
+  color: grey;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.5em;
+  text-align: center;
+  margin: 0px;
+}
+
+.card-header {
+  padding: none;
+  margin: 2px;
+}
+
+.result-img {
+  max-width: 200px;
+  max-height: 175px;
+  padding: 0px;
+  margin:2px;
+}
+
+.card {
+  width: 21%;
+  height: 300px;
+  border: solid lightpink 1px;
+  margin: 15px;
+  padding: 2px;
+  float: left;
+  overflow: auto;
+  text-align: center;
+}
+
+.card:nth-child(5n+0) {
+  width: 42%;
+  margin-left: 23px;
+  margin-right: 23px;
+  border: solid #ffc0cb80 1px;
+  background: #ffc0cb80;
+}
+
+
+.result-description {
+  font-size: 0.8em;
+  line-height: 0.5em;
+}
+
+span {
+  color: lightgrey;
+} 
+
