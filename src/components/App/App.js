@@ -61,7 +61,7 @@ class App extends Component {
         <div id="resultsDiv">
           {
             !isLoading && results.businesses ? this.state.results.businesses.map((bizniz, index) => {
-              return <ResultCard key={index} name={bizniz.name} img={bizniz.image_url} distance={(bizniz.distance * milesPerMeter).toFixed(1)} price={bizniz.price} rating={bizniz.rating} phone={bizniz.phone} onHover={this.handleHover} />
+              return <ResultCard key={index} name={bizniz.name} img={bizniz.image_url} distance={(bizniz.distance * milesPerMeter).toFixed(1)} price={bizniz.price} rating={bizniz.rating} phone={bizniz.phone} onHover={this.handleHover} lat={bizniz.coordinates.latitude} long={bizniz.coordinates.longitude} />
             }) : null
           }
 

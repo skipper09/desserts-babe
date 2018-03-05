@@ -4,6 +4,14 @@ body {
   font-family: sans-serif;
 }
 
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+a {
+  color:darkgrey;
+}
+
 header {
   margin-top: 0px;
   height: 13vh;
@@ -33,7 +41,7 @@ input {
 }
 
 #search-div {
-  padding: 15px;
+  margin: 20px;
   height: 5vh;
 }
 
@@ -44,6 +52,9 @@ label {
 }
 
 #resultsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   overflow: auto; 
   height: 63vh;
 }
@@ -59,6 +70,7 @@ footer {
 .card-header {
   padding: none;
   margin: 2px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .result-img {
@@ -69,31 +81,37 @@ footer {
 }
 
 .card {
-  width: 21%;
-  height: 300px;
-  border: solid lightpink 1px;
-  margin: 15px;
+  /* width: 21%; */
+  height: 275px;
+  border: solid pink 1px;
+  margin: 8px;
   padding: 2px;
   float: left;
   overflow: auto;
   text-align: center;
+  flex: 1 0 auto;
 }
 
 .card:nth-child(5n+0) {
   width: 42%;
-  margin-left: 23px;
-  margin-right: 23px;
-  border: solid #ffc0cb80 1px;
-  background: #ffc0cb80;
 }
 
+/* .card:nth-child(7n+0) {
+border: solid #ffc0cb80 1px;
+background: #ffc0cb80;
+} */
 
 .result-description {
   font-size: 0.8em;
   line-height: 0.5em;
 }
 
-span {
+.divider {
   color: lightgrey;
 } 
+
+.neon-text {
+  font-weight: bold;
+  -webkit-text-stroke: 0.5px rgb(233, 123, 224);
+}
 
