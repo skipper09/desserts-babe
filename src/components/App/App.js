@@ -7,17 +7,33 @@ class App extends Component {
     super(props)
     this.state = {
       searchValue: "",
-      geolocation: "",
+      // lat: "",
+      // long: "",
       isLoading: true,
       results: []
     }
   }
 
+  // componentDidMount() {
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition(position => {
+  //       this.setState({
+  //         lat: position.coords.latitude,
+  //         long: position.coords.longitude
+  //       }) 
+  //       console.log(this.state);
+  //       this.fetchData("&latitude=", this.state.lat, "&longitude=", this.state.long)
+  //     }
+  //     )
+  //   }
+  // }
+
   handleChange = (event) => {
     this.setState({
       searchValue: event.target.value
     })
-    this.fetchData()
+    // this.fetchData("&location=", this.state.searchValue)
+    this.fetchData();
   }
 
   fetchData() {
@@ -40,10 +56,6 @@ class App extends Component {
     console.log(this.state.results.businesses)
   }
 
-  handleHover = (event) => {
-    event.currentTarget.style.backgroundColor = '#ccc';
-  }
-
   render() {
     const { isLoading, results } = this.state;
     const milesPerMeter = 0.000621371192;
@@ -51,8 +63,7 @@ class App extends Component {
     return (
       <div className="App">
         <div id="search-div">
-          <Search value={this.state.searchValue} onChange={this.handleChange} id="search" />
-          <label htmlFor="id">Enter your address, city, or zip code to search; or allow the website to see your location</label>
+          <Search value={this.state.searchValue} onChange={this.handleChange} label={"Enter your address, city, or zip code to search"} id="search" />
         </div>
         <div id="resultsDiv">
           {
