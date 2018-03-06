@@ -21,21 +21,19 @@ header {
 
 #header-title {
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0px auto;
   font-family: 'Courier New', Courier, monospace;
   line-height: 1em;
   font-size: 1.5em;
 }
 
 #header-title, h1 {
-  margin-top: 0px;
+  margin-top: 10px;
 }
 
 #root {
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0px auto;
 }
 
 input {
@@ -79,32 +77,28 @@ footer {
 }
 
 .result-img {
-  max-width: 200px;
-  max-height: 15vh;
-  padding: 0px;
-  margin:2px;
+  width: 100%;
+}
+
+.card-img {
+  width: 100%;
+  max-height: 60%;
+  overflow: hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .card {
-  /* width: 21%; */
+  width: 29vh;
   height: 29vh;
-  border: solid pink 1px;
+  border: dotted pink 1px;
   margin: 8px;
   padding: 2px;
   float: left;
-  /* overflow: hidden; */
   text-align: center;
-  flex: 1 0 auto;
+  flex: 0 1 auto;
 }
-
-.card:nth-child(5n+0) {
-  width: 42%;
-}
-
-/* .card:nth-child(7n+0) {
-border: solid #ffc0cb80 1px;
-background: #ffc0cb80;
-} */
 
 .result-description {
   font-size: 0.8em;
@@ -152,4 +146,48 @@ background: #ffc0cb80;
   32.75% {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
   100% {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
 }
+
+@media screen and (max-width:1150px) {
+  .card {
+    width: 45%;
+  }
+
+  #resultsDiv {
+    justify-content: space-evenly;
+    overflow: auto; 
+    height: 63vh;
+  }
+
+}
+
+@media screen and (max-width:960px) {
+  input {
+    width: 90%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card-img {
+    max-height: 70%;
+  }
+}
+
+@media screen and (max-width:640px) {
+  #search-div {
+    height: 10vh;
+  }
+
+  header {
+    height: 5%;
+  }
+
+  #header-title {
+    font-size: 1em;
+  }
+  
+}
+
+
 
