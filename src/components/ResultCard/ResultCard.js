@@ -8,8 +8,7 @@ export default function ResultCard(props) {
                 <img src={props.img} alt={props.name} className="result-img" />
                 <div className="result-description">
                     <p>{props.price} <span className="divider">|</span> {props.distance} mile(s) away </p>
-                    <p>{props.phone}</p>        
-                    <a href={`https://www.google.com/maps/search/?api=1&query=${props.lat},${props.long}`} target="_blank">Click to navigate</a>
+                    <p><a href={props.yelp} target="_blank">Yelp</a><span className="divider"> | </span><a href={`https://www.google.com/maps/search/?api=1&query=${props.lat},${props.long}`} target="_blank">Open in Maps</a></p>
                 </div>
             </div>
     )

@@ -24,7 +24,12 @@ header {
   margin-left: auto;
   margin-right: auto;
   font-family: 'Courier New', Courier, monospace;
-  line-height: 0.75em;
+  line-height: 1em;
+  font-size: 1.5em;
+}
+
+#header-title, h1 {
+  margin-top: 0px;
 }
 
 #root {
@@ -75,19 +80,19 @@ footer {
 
 .result-img {
   max-width: 200px;
-  max-height: 175px;
+  max-height: 15vh;
   padding: 0px;
   margin:2px;
 }
 
 .card {
   /* width: 21%; */
-  height: 275px;
+  height: 29vh;
   border: solid pink 1px;
   margin: 8px;
   padding: 2px;
   float: left;
-  overflow: auto;
+  /* overflow: hidden; */
   text-align: center;
   flex: 1 0 auto;
 }
@@ -112,6 +117,39 @@ background: #ffc0cb80;
 
 .neon-text {
   font-weight: bold;
-  -webkit-text-stroke: 0.5px rgb(233, 123, 224);
+  -webkit-animation-name: neon-light;
+  -webkit-animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: neon-light;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes neon-light {
+  0%   {-webkit-text-stroke: 1.5px rgb(233, 122, 224);}
+  22%   {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
+  25%  {-webkit-text-stroke: 0px;}
+  26%  {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
+  29%  {-webkit-text-stroke: 0px;}
+  30% {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
+  31%  {-webkit-text-stroke: 0px;}
+  32% {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
+  32.5%  {-webkit-text-stroke: 0px;}
+  33% {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
+  100% {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
+}
+
+@keyframes neon-light {
+  0%   {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
+  22%   {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
+  25%  {-webkit-text-stroke: 0px;}
+  26%  {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
+  29%  {-webkit-text-stroke: 0px;}
+  30% {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
+  31%  {-webkit-text-stroke: 0px;}
+  32% {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
+  32.5%  {-webkit-text-stroke: 0px;}
+  32.75% {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
+  100% {-webkit-text-stroke: 1.5px rgb(233, 123, 224);}
 }
 
